@@ -26,7 +26,7 @@ namespace ForzaCore
         static void Main(string[] args)
         {
             #region udp stuff
-            var ipEndPoint = new IPEndPoint(IPAddress.Loopback, FORZA_DATA_OUT_PORT);
+            var ipEndPoint = new IPEndPoint(IPAddress.any, FORZA_DATA_OUT_PORT);
             var senderClient = new UdpClient(FORZA_HOST_PORT);
             var receiverTask = Task.Run(async () =>
             {
